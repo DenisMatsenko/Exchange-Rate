@@ -5,8 +5,104 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExchangeRate"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        ResizeMode="NoResize"
+        Title="Exchange Rate" Height="320" Width="520">
+
+    <Border Background="Black">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="1">
+                <Button Content="Exchange rate"
+                             Height="30"
+                             Background="Green"
+                             Foreground="White"
+                             FontSize="14"
+                             BorderThickness="0" 
+                             Click="ExcRate_Click"/>
+
+                <Button Content="Settings"
+                             Height="30"
+                             Background="Green"
+                             Foreground="White"
+                             FontSize="14"
+                             BorderThickness="0"
+                             Click="Settings_Click"/>
+
+                <Button Content="About"
+                             Height="30"
+                             Background="Green"
+                             Foreground="White"
+                             FontSize="14"
+                             BorderThickness="0"
+                             Click="About_Click"/>
+            </StackPanel>
+
+
+            <StackPanel x:Name="MainStackPanel"
+                        Grid.Row="1" Grid.Column="1">
+                
+                <Grid Width="380" Height="50"
+                      Background="Wheat"
+                      Margin="10">
+
+                    <Grid HorizontalAlignment="Left">
+                        <TextBlock Text="USD"
+                               FontSize="25"
+                               Background="red"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+
+                        <TextBlock Text="uussddd"
+                               FontSize="15"
+                               Background="Blue"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Left"/>
+
+                        <TextBlock Text="1"
+                                   FontSize="30"
+                                   VerticalAlignment="Center"
+                                   Margin="120,0,0,0"/>
+                    </Grid>
+
+                    <Grid HorizontalAlignment="Right">
+                        <TextBlock Text="CZK"
+                               FontSize="25"
+                               Background="red"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Right"/>
+
+                        <TextBlock Text="CZK"
+                               FontSize="15"
+                               Background="Blue"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Right"/>
+
+                        <TextBlock Text="1"
+                                   FontSize="30"
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,120,0"/>
+                    </Grid>
+
+                    <TextBlock Text=">"
+                               FontSize="30"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="0.0212"
+                               FontSize="12"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Center"/>
+
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+    </Border>
+
+
 </Window>
