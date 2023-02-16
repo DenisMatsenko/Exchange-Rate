@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ExchangeRate"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Exchange Rate" Height="320" Width="520">
+        Title="Exchange Rate" Height="320" Width="540">
 
     <Border Background="Black">
 
@@ -43,10 +43,20 @@
             </StackPanel>
 
 
-            <StackPanel x:Name="MainStackPanel"
-                        Grid.Row="1" Grid.Column="1">
-                
-                <Grid Width="380" Height="50"
+            <ScrollViewer Grid.Row="1" Grid.Column="1">
+                <StackPanel x:Name="MainStackPanel">
+                </StackPanel>
+            </ScrollViewer>
+
+        </Grid>
+
+    </Border>
+
+
+</Window>
+
+
+<!--<Grid Width="380" Height="50"
                       Background="Wheat"
                       Margin="10">
 
@@ -98,11 +108,4 @@
                                VerticalAlignment="Bottom"
                                HorizontalAlignment="Center"/>
 
-                </Grid>
-            </StackPanel>
-        </Grid>
-
-    </Border>
-
-
-</Window>
+                </Grid>-->
