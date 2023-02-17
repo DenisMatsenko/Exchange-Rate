@@ -44,7 +44,69 @@
 
 
             <ScrollViewer Grid.Row="1" Grid.Column="1">
-                <StackPanel x:Name="MainStackPanel">
+                <StackPanel>
+                    <StackPanel x:Name="MainStackPanel">
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10,0,10,0">
+                        
+                        <Grid Background="Blue"
+                          Width="75" Height="50"
+                          Margin="0, 10, 0, 0">
+
+                            <Button Content="Clear all"
+                                    Width="60" Height="30"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Click="ClearAllButtonClick"/>
+
+                        </Grid>
+
+                        <Grid Background="red"
+                          Width="310" Height="50"
+                          Margin="10, 10, 10, 0">
+
+                            <ComboBox x:Name="LeftDropMenu"
+                                  Width="60" Height="30"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Left"
+                                  Margin="10, 0,0,0">
+
+                                <ComboBoxItem Content="CZK"/>
+                                <ComboBoxItem Content="USD"/>
+                                <ComboBoxItem Content="EUR"/>
+
+                            </ComboBox>
+
+                            <ComboBox x:Name="RightDropMenu"
+                                  Width="60" Height="30"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Left"
+                                  Margin="110, 0,0,0">
+
+                                <ComboBoxItem Content="CZK"/>
+                                <ComboBoxItem Content="USD"/>
+                                <ComboBoxItem Content="EUR"/>
+
+                            </ComboBox>
+
+                            <Border    Width="20" Height="6"
+                                   Background="Gray"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Margin="80,0,0,0"/>
+
+                            <Button Content="Add Exchange"
+                                Width="100" Height="30"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="0,0,20,0" Click="AddExchangeButtonClick"/>
+
+                        </Grid>
+                    </StackPanel>
+
+                   
                 </StackPanel>
             </ScrollViewer>
 
