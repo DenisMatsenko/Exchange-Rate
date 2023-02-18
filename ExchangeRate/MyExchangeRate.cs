@@ -11,14 +11,14 @@ namespace ExchangeRate
 {
     internal class MyExchangeRate
     {
-        public string OneCurrency { get; set; }
-        public string TwoCurrency { get; set; }
+        public string OneCurrencyName { get; set; }
+        public string TwoCurrencyName { get; set; }
         public Grid Grid { get; set; }
 
         public MyExchangeRate(string oneCurrency, string twoCurrency)
         {
-            OneCurrency = oneCurrency;
-            TwoCurrency = twoCurrency;
+            OneCurrencyName = oneCurrency;
+            TwoCurrencyName = twoCurrency;
 
             Grid = CreateNewExchangeGrid(oneCurrency, twoCurrency);
         }

@@ -21,7 +21,7 @@ namespace ExchangeRate
         public MainWindow()
         {
             InitializeComponent();
-            InitMyCurrencies();
+            InitMyComponents();
         }
 
         private void ExcRate_Click(object sender, RoutedEventArgs e)
@@ -29,13 +29,14 @@ namespace ExchangeRate
 
         }
 
-        private void InitMyCurrencies()
+        private void InitMyComponents()
         {
             if (!File.Exists("MyCurrencies.txt"))
                 InitMyCurrenciesFile();
+            if (!File.Exists("MyExchagesRates.txt"))
+                InitMyExchangesRatesFile();
 
             RefreshBoxes();
-
         }
 
         public void RefreshBoxes()
@@ -51,6 +52,11 @@ namespace ExchangeRate
         private void InitMyCurrenciesFile()
         {
             File.Create("MyCurrencies.txt");
+        }
+
+        private void InitMyExchangesRatesFile()
+        {
+            File.Create("MyExchagesRates.txt");
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
